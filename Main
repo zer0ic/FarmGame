@@ -1,0 +1,35 @@
+# Squares = 52
+# Roll = 1-12
+# Next square = (current square + roll)
+# If next square is greater than 52, subtract 52 from next square
+import random
+
+
+CurrentSquare = 0
+ExitCondition = 'n'
+RollNumber = 0
+NextSquare = 0
+CurrentCash = 5000
+CurrentDebt = 5000
+CurrentHay = 20
+CurrentGrain = 10
+CurrentCows = 0
+CurrentFruit = 0
+
+print ("Welcome to Farm Game!\n \n")
+
+while (ExitCondition == 'n'):
+    print ("Current square :",CurrentSquare)
+    
+    RollNumber = random.randint(1,12)
+    print ("You have rolled :",RollNumber)
+    
+    CurrentSquare = (CurrentSquare + RollNumber)
+    if (CurrentSquare > 52):
+        CurrentSquare = (CurrentSquare-52)
+        
+    print ("Your new square is :",CurrentSquare)
+    print ("Finanices are: Cash:",CurrentCash)
+
+    ExitCondition = input("exit? (y/n)")
+    
